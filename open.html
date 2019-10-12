@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" href="open.css">
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/angular-ui-router.min.js"></script>
+    <script src="open.app.js"></script>
+    <script src="open.factory.js"></script>
+    <title>Elavus CrossFit Open</title>
+</head>
+<body ng-app="openApp" ng-controller="openController as vm">
+    <div class="table">
+        <div class="headerRow">
+            <div class="headerCellLeft">
+                <img class="headerCellLeft" src="http://assets.crossfit.com/build/img/sites/games/logos/2020.svg" />
+                <span class="tooltiptext">
+                    How to Get Points<hr />
+                    <label ng-repeat="accomplishment in vm.Sheet.Accomplishments">{{accomplishment.gsx$comments.$t}} - {{accomplishment.gsx$points.$t}} pts<br /></label>
+                </span>
+            </div>
+            <div class="headerCellCenter">2020 Elavus CrossFit Open</div>
+            <div class="headerCellRight">
+                <img class="headerCellRight" src="Images/Elavus.png" />
+            </div>
+        </div>
+    </div>
+
+    <div class="table">
+        <div class="teamsRow">
+            <div ng-repeat="team in vm.Teams"  class="teamsCell" >
+                <div class="teamCell">
+                    <img ng-show="team.IsAustin" class="teamHeader" ng-src="Images/Austin.jpg" />
+                    <img ng-show="team.IsDJ" class="teamHeader" ng-src="Images/DJ.jpg" />
+                    <img ng-show="team.IsJen" class="teamHeader" ng-src="Images/Jen.jpg" />
+                    <img ng-show="team.IsKendra" class="teamHeader" ng-src="Images/Kendra.jpg" />
+                    
+                    <div class="table">
+                        <div class="basicRow">
+                            <div class="basicCellLeft">
+                                <label class="team" ng-show="team.Initialized">{{team.Icon}}</label>
+                            </div>
+                            <div class="basicCellCenter">
+                                <label class="team">{{team.Name}}</label>
+                            </div>
+                            <div class="basicCellRight">
+                                <label class="team" ng-show="team.Initialized">{{team.FormattedScore}}</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr />
+                    
+                    <div class="table">
+                        <div class="basicRow" ng-repeat="athlete in team.Athletes">
+                            <div class="basicCellLeft" ng-hide="athlete.Initialized"></div>
+                            <div class="basicCellCenter" ng-hide="athlete.Initialized">
+                                <label class="team">{{athlete.Athlete}}</label>
+                            </div>
+
+                            <div class="basicCellLeftCenter" ng-show="athlete.Initialized" >
+                                <label class="team">{{athlete.Icon}} </label>
+                                <label class="team">{{athlete.Athlete}}</label>
+                                <span class="tooltiptext">Athlete: {{athlete.Athlete}} - {{athlete.Score}} pts<hr />
+                                    <label ng-repeat="score in athlete.Scores">Week {{score.Week}}: {{score.Accomplishment}} - {{score.Score}} pts<br /></label>
+                                </span>
+                            </div>
+                            <div class="basicCellRight">
+                                <label class="team" ng-show="athlete.Initialized">{{athlete.Score}}</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

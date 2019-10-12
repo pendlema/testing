@@ -1,0 +1,192 @@
+﻿body {
+    background-color:silver;
+    font-family:Verdana;
+    margin:0px;
+}
+
+div.table{
+    display: table;
+}
+
+
+div.headerRow{
+    display: table-row;
+    height:15vh;
+    vertical-align:middle;
+}
+
+div.basicRow{
+    display: table-row;
+    height:inherit;
+    vertical-align:middle;
+    font-size:30px;
+}
+
+div.basicCellLeft{
+    display: table-cell;
+    height:inherit;
+    width: 3vw;
+    background-color:inherit;
+    vertical-align:inherit;
+    text-align:right;
+    padding-right:10px;
+    font-family:'Arial Rounded MT';
+    font-size: inherit;
+    color:navy;
+}
+
+div.basicCellCenter{
+    display: table-cell;
+    height:inherit;
+    width: 18vw;
+    background-color:inherit;
+    vertical-align:inherit;
+    text-align:center;
+    font-family:'Arial Rounded MT';
+    font-size: inherit;
+    color:navy;
+}
+
+div.basicCellLeftCenter{
+    display: table-cell;
+    height:inherit;
+    width: 21vw;
+    background-color:inherit;
+    vertical-align:inherit;
+    text-align:center;
+    font-family:'Arial Rounded MT';
+    font-size: inherit;
+    color:navy;
+}
+div.basicCellRight{
+    display: table-cell;
+    height:inherit;
+    width: 3vw;
+    background-color:inherit;
+    vertical-align:inherit;
+    text-align:right;
+    font-family:'Arial Rounded MT';
+    font-size:inherit;
+    color:navy;
+    padding-right: 8px;
+}
+
+div.headerCellLeft{
+    display: table-cell;
+    height:inherit;
+    width: 12vw;
+    background-color:inherit;
+    vertical-align:inherit;
+    text-align:right;
+    padding-right:10px;
+    padding-left:10px;
+}
+
+div.headerCellCenter{
+    display: table-cell;
+    height:inherit;
+    width: 76vw;
+    background-color:inherit;
+    vertical-align:inherit;
+    text-align:center;
+    font-family:'Arial Rounded MT';
+    font-size:64px;
+    color:firebrick;
+}
+
+div.headerCellRight{
+    display: table-cell;
+    height:inherit;
+    width: 12vw;
+    background-color:inherit;
+    vertical-align:inherit;
+    text-align:left;
+}
+
+img.headerCellLeft{
+    height:90%;
+}
+
+img.headerCellRight{
+    height:100%
+}
+
+img.team
+{
+    height:100%;
+    width:100%;
+}
+
+div.teamsRow{
+    display: table-row;    
+    height: 84vh;
+}
+
+div.teamsCell{
+    display: table-cell;
+    height:inherit;
+    width: 25vw;
+    vertical-align: middle;
+    text-align:center;
+}
+
+
+div.teamCell{
+    display: inline-block;
+    height:98%;
+    width: 98%;
+    border-radius: 100px 100px 50px 50px;
+    background-color: lightgrey;
+    font-size: 36px;
+}
+
+img.teamHeader {
+    display: inline-block;
+    width: inherit;
+    border-radius: 100px 100px 0px 0px;
+}
+
+/* Tooltip text */
+.basicCellLeftCenter .tooltiptext {
+  visibility: hidden;
+
+  top: 15vh;
+  width: 50vw;
+  left: 25vw;
+  background-color: navy;
+  color: white;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.basicCellLeftCenter:hover .tooltiptext {
+  visibility: visible;
+}
+
+.headerCellLeft .tooltiptext {
+  visibility: hidden;
+
+  top: 15vh;
+  width: 50vw;
+  left: 25vw;
+  background-color: navy;
+  color: white;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.headerCellLeft:hover .tooltiptext {
+  visibility: visible;
+}
